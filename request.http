@@ -4,10 +4,18 @@ Content-Type: application/json
 {
   "name": "cruz",
   "module" : 5,
-  "start_date" : "2021-06-01",
+  "start_date" : "2021-06-05",
   "end_date" : "2021-07-31"
 }
 
 ###
 
-GET http://localhost:3003/ping
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+  "name": "Samuel",
+  "email": "sam@gmail.com",
+  "birth_date": "1999-11-29",
+  "class_id": 1622597541656
+}

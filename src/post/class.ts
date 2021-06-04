@@ -1,6 +1,7 @@
 import {Request, Response} from "express";
 import {Class} from "../types_enum/types";
 import {connection} from "../connection";
+import {date_period} from "../validations/date";
 
 type Class_body = {
   name : string,
@@ -37,10 +38,8 @@ function valide_body(class_body : Class_body) : Class | boolean{
     class_body.module>7
   )return false
 
-  if(!validate_date(class_body.start_date) ||
-    !validate_date(class_body.end_date)
-  )return false
 
+  if(date_period(class_body.start_date)<0 || date_period(class_body.end_date)<0) return false
 
   const id = Date.now()
   return {
@@ -49,7 +48,7 @@ function valide_body(class_body : Class_body) : Class | boolean{
   }
 }
 
-function validate_date(date : string) : boolean{
+function future_date(date : string) : boolean{
   // const reg = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
   // if(!reg.test(date))return false
   const data = new Date(date+'T00:00:00')
