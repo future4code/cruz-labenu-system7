@@ -14,7 +14,6 @@ type Student_body = {
 export async function post_student(req: Request, res: Response) {
   try {
     const student_body : Student_body = req.body as Student_body
-    console.log('typeof', typeof student_body.class_id)
 
     if(!validate_body(student_body)){
       throw new Error('Erro no body')

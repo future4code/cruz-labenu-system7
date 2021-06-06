@@ -19,3 +19,15 @@ Content-Type: application/json
   "birth_date": "1999-11-29",
   "class_id": 1622597541656
 }
+
+###
+
+POST http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+  "name": "Sam",
+  "email": "sam_prof@labenu.com",
+  "birth_date": "1990-11-29",
+  "class_id": 1622597541656
+}
