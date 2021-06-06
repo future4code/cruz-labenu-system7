@@ -14,10 +14,10 @@ POST http://localhost:3003/student
 Content-Type: application/json
 
 {
-  "name": "Samuel",
-  "email": "sam@gmail.com",
-  "birth_date": "1999-11-29",
-  "class_id": 1622597541656
+  "name": "Vitoria",
+  "email": "vitoria@gmail.com",
+  "birth_date": "2000-02-12",
+  "class_id": 1622597510104
 }
 
 ###
@@ -30,4 +30,14 @@ Content-Type: application/json
   "email": "sam_prof@labenu.com",
   "birth_date": "1990-11-29",
   "class_id": 1622597541656
+}
+
+###
+
+PUT http://localhost:3003/class/student
+Content-Type: application/json
+
+{
+  "id_class": 1622597510104,
+  "id_student": 1622971201696
 }

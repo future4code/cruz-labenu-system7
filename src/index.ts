@@ -4,9 +4,14 @@ import { connection } from "./connection";
 import {post_class} from "./post/class";
 import {post_student} from "./post/student";
 import {post_teacher} from "./post/teacher";
+import {put_class_student} from "./put/put_class_student";
 
 app.post('/class', async(req: Request, res: Response) => {
   await post_class(req, res)
+})
+
+app.put('/class/student', async(req: Request, res: Response) => {
+  await put_class_student(req, res)
 })
 
 app.post('/student',  async(req: Request, res: Response) => {
