@@ -1,5 +1,8 @@
 #Instruções
 
+##Criar tabela ####POST
+endpoint: /tables 
+
 ###GET
 
 <h5>Retorna estudantes da classe</h5>
