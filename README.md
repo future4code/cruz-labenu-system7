@@ -1,33 +1,62 @@
-## LabenuSystem:
+#Instruções
 
-Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização. 
+###GET
 
-Ele deve possuir, ao menos, as 3 entidades importantes:
+<h5>Retorna estudantes da classe</h5>
+<h6>
+	endpoint: /class/:id/students
+</h6>
 
-1. Estudantes 
+<h5>Retorna professores da classe</h5>
+<h6>
+endpoint: /class/:id/teachers
+</h6>
 
-    Representa estudantes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e os principais hobbies dele. 
+<h5>Retorna idade de um estudante</h5>
+<h6>
+endpoint: /student/:id
+</h6>
 
-2. Docente
+###POST
 
-    Representa docentes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
+<h5>Cria um classe</h5>
+<h6>
+endpoint: /class <br>
+Espera receber no body-> name,start_date,end_date, module : number
+</h6>
 
-3. Turma
+<h5>Cria um estudante</h5>
+<h6>
+endpoint: /student <br>
+Espera receber no body-> name,email, birth_date, class_id? : number
+</h6>
 
-    Toda turma é composta das seguintes características: id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
+<h5>Cria um professor</h5>
+<h6>
+endpoint: /teacher <br>
+Espera receber no body-> name,email, birth_date, class_id? : number
+</h6>
 
-    O módulo pode assumir os valores de 1 a 7 ou `undefined`, indicando que as aulas dessa turma ainda não começaram. Para esse exercício, vamos considerar que existam dois tipos de turma: integral ou noturna. Há uma restrição para o nome das turmas noturnas: tem que terminar com `-na-night`.
+###PUT
 
-As funcionalidades básicas são:
+<h5>Adiciona estudante a uma turma</h5>
+<h6>
+endpoint: /class/student <br>
+Espera receber no body-> id_class : number, id_student : number
+</h6>
 
-→ Criar estudante;
+<h5>Adiciona professor a uma turma</h5>
+<h6>
+endpoint: /class/teacher <br>
+Espera receber no body-> id_class : number, id_teacher : number
+</h6>
 
-→ Criar docente;
-
-→ Criar turma;
-
-→ Adicionar estudante na turma;
-
-→ Adicionar docente na turma;
-
-→ Pegar a idade de algum estudante a partir do id
+###DEL
+<h5>Remove aluno da turma</h5>
+<h6>
+endpoint: /student/:id/class
+</h6>
+<h5>Remove professor da turma</h5>
+<h6>
+endpoint: /teacher/:id/class
+</h6>
