@@ -41,3 +41,7 @@ Content-Type: application/json
   "id_class": 1622597510104,
   "id_teacher": 1622969646109
 }
+
+###
+
+GET http://localhost:3003/student/1622971201696
