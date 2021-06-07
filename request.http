@@ -34,10 +34,10 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3003/class/student
+PUT http://localhost:3003/class/teacher
 Content-Type: application/json
 
 {
   "id_class": 1622597510104,
-  "id_student": 1622971201696
+  "id_teacher": 1622969646109
 }
