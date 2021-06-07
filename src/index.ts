@@ -9,6 +9,11 @@ import {put_Class_teacher} from "./put/put_class_teacher";
 import {get_student} from "./get/student";
 import {get_class_members} from "./get/class";
 import {del_member_class} from "./del/member_class";
+import {tables} from "./post/tables";
+
+app.post('/tables', async(req: Request, res: Response) => {
+  await tables(req, res)
+})
 
 app.get('/class/:id/students', async (req: Request, res: Response) => {
   await get_class_members(req, res,'Student_17')

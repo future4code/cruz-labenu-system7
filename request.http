@@ -49,3 +49,7 @@ GET http://localhost:3003/class/1622597510104/teachers
 ###
 
 DELETE http://localhost:3003/teacher/1622969646109/class
+
+###
+
+POST http://localhost:3003/tables
