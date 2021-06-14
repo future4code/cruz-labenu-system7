@@ -1,7 +1,7 @@
 #Instruções
 
-##Criar tabela ####POST
-endpoint: /tables 
+##Criar tabela
+####POST <h6>endpoint: /tables </h6>
 
 ###GET
 

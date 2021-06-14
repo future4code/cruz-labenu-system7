@@ -1,0 +1,55 @@
+POST http://localhost:3003/class
+Content-Type: application/json
+
+{
+  "name": "cruz",
+  "module" : 5,
+  "start_date" : "2021-06-05",
+  "end_date" : "2021-07-31"
+}
+
+###
+
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+  "name": "Vitoria",
+  "email": "vitoria@gmail.com",
+  "birth_date": "2000-02-12",
+  "class_id": 1622597510104
+}
+
+###
+
+POST http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+  "name": "Sam",
+  "email": "sam_prof@labenu.com",
+  "birth_date": "1990-11-29",
+  "class_id": 1622597541656
+}
+
+###
+
+PUT http://localhost:3003/class/teacher
+Content-Type: application/json
+
+{
+  "id_class": 1622597510104,
+  "id_teacher": 1622969646109
+}
+
+###
+
+GET http://localhost:3003/class/1622597510104/teachers
+
+###
+
+DELETE http://localhost:3003/teacher/1622969646109/class
+
+###
+
+POST http://localhost:3003/tables
